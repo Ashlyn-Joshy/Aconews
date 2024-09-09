@@ -1,9 +1,35 @@
-function App() {
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+//components and pages
+import Navbar from "./components/Navbar";
+import Footer from "./components/footer";
+import Home from "./page.js/Home";
+
+const AppComponent = () => {
   return (
-    <h1 className="text-3xl font-bold underline text-green-400">
-      Welcome to Aconews
-    </h1>
+    <>
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </>
   );
+};
+
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppComponent />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  },
+]);
+
+function App() {
+  return <RouterProvider router={appRouter} />;
 }
 
 export default App;
