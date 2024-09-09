@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/footer";
 import Home from "./page.js/Home";
 import ErrorPage from "./page.js/ErrorPage";
+import Aboutus from "./page.js/Aboutus";
 
 const AppComponent = () => {
   return (
@@ -25,6 +26,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/aboutus",
+        element: <Aboutus />,
       },
     ],
   },

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isDark, setIsDark] = useState(false);
@@ -23,7 +24,9 @@ const Navbar = () => {
   return (
     <div>
       <nav className="flex justify-between p-5 shadow shadow-lg font-bold dark:bg-gray-600">
-        <h1 className="text-3xl text-blue-400">AcoNews</h1>
+        <h1 className="text-3xl text-blue-400">
+          <Link to={"/"}>AcoNews</Link>
+        </h1>
 
         <div className="block lg:hidden">
           {menu ? (
@@ -44,7 +47,9 @@ const Navbar = () => {
         >
           <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 text-blue-400">
             <li>Current Trending</li>
-            <li>About Us</li>
+            <li>
+              <Link to={"/aboutus"}>About Us</Link>
+            </li>
             <li>
               <button onClick={toggleDarkMode} className="outline px-2 rounded">
                 {isDark ? "🌞" : "🌚"}
