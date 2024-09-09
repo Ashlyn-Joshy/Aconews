@@ -7,6 +7,8 @@ import Home from "./page.js/Home";
 import ErrorPage from "./page.js/ErrorPage";
 import Aboutus from "./page.js/Aboutus";
 import GeneralNews from "./page.js/GeneralNews";
+import SportsNews from "./page.js/SportsNews";
+import BusinessNews from "./page.js/BusinessNews";
 
 const AppComponent = () => {
   return (
@@ -35,6 +37,14 @@ const appRouter = createBrowserRouter([
       {
         path: "/general",
         element: <GeneralNews />,
+      },
+      {
+        path: "/sports",
+        element: <SportsNews />,
+      },
+      {
+        path: "/business",
+        element: <BusinessNews />,
       },
     ],
   },
