@@ -5,7 +5,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   const toggleMenu = () => {
-    setMenu(!menu); // Toggles the menu visibility
+    setMenu(!menu);
   };
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Navbar = () => {
   }, [isDark]);
 
   const toggleDarkMode = () => {
-    setIsDark(!isDark); // Toggles dark mode
+    setIsDark(!isDark);
   };
 
   return (
@@ -43,8 +43,8 @@ const Navbar = () => {
           } lg:flex lg:items-center lg:w-auto lg:space-x-4`}
         >
           <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 text-blue-400">
+            <li>Current Trending</li>
             <li>About Us</li>
-            <li>Contact Us</li>
             <li>
               <button onClick={toggleDarkMode} className="outline px-2 rounded">
                 {isDark ? "🌞" : "🌚"}
