@@ -46,7 +46,9 @@ const Navbar = () => {
           } lg:flex lg:items-center lg:w-auto lg:space-x-4`}
         >
           <ul className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 text-blue-400">
-            <li>Current Trending</li>
+            <li>
+              <Link to={"/general"}>Current Trending</Link>
+            </li>
             <li>
               <Link to={"/aboutus"}>About Us</Link>
             </li>

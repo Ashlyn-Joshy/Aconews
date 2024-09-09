@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import Home from "./page.js/Home";
 import ErrorPage from "./page.js/ErrorPage";
 import Aboutus from "./page.js/Aboutus";
+import GeneralNews from "./page.js/GeneralNews";
 
 const AppComponent = () => {
   return (
@@ -30,6 +31,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/aboutus",
         element: <Aboutus />,
+      },
+      {
+        path: "/general",
+        element: <GeneralNews />,
       },
     ],
   },

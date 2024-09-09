@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
   return (
@@ -17,7 +18,7 @@ const NewsCard = ({ news }) => {
         </p>
         <p>{news.description}</p>
         <button className="rounded text-white bg-blue-400 py-2 px-4">
-          Read More
+          <Link to={news.url}>Read More</Link>
         </button>
       </div>
     </div>
