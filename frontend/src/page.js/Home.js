@@ -1,11 +1,12 @@
 import React from "react";
 import useNewsData from "../Hooks/useNewsData";
 import NewsCard from "../components/NewsCard";
+import Shimmer from "../components/Shimmer";
 
 const Home = () => {
   const [allNews] = useNewsData();
   if (!allNews || allNews.length === 0) {
-    return <p className="dark:bg-gray-600">Loading...</p>;
+    return <Shimmer />;
   }
   return (
     <div className="md:p-10 dark:bg-black">
