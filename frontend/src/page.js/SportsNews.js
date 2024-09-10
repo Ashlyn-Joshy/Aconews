@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import useNewsData from "../Hooks/useNewsData";
 import Shimmer from "../components/Shimmer";
@@ -24,6 +25,14 @@ const SportsNews = () => {
             <NewsCard news={news} />
           </div>
         ))}
+      </div>
+      <div className="flex py-3 justify-center">
+        <button className="text-white bg-blue-400 rounded py-2 px-4">
+          <Link to={"/general"}>Previous page</Link>
+        </button>
+        <button className="text-white bg-blue-400 rounded py-2 px-4 ml-2">
+          <Link to={"/business"}>Next Page</Link>
+        </button>
       </div>
     </div>
   );

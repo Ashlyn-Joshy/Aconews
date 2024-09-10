@@ -9,6 +9,12 @@ import Aboutus from "./page.js/Aboutus";
 import GeneralNews from "./page.js/GeneralNews";
 import SportsNews from "./page.js/SportsNews";
 import BusinessNews from "./page.js/BusinessNews";
+import WorldNews from "./page.js/WorldNews";
+import NationNews from "./page.js/NationNews";
+import TechnologyNews from "./page.js/TechnologyNews";
+import ScienceNews from "./page.js/ScienceNews";
+import HealthNews from "./page.js/HealthNews";
+import EntertainmentNews from "./page.js/EntertainmentNews";
 
 const AppComponent = () => {
   return (
@@ -45,6 +51,30 @@ const appRouter = createBrowserRouter([
       {
         path: "/business",
         element: <BusinessNews />,
+      },
+      {
+        path: "/world",
+        element: <WorldNews />,
+      },
+      {
+        path: "/nation",
+        element: <NationNews />,
+      },
+      {
+        path: "/technology",
+        element: <TechnologyNews />,
+      },
+      {
+        path: "/science",
+        element: <ScienceNews />,
+      },
+      {
+        path: "/health",
+        element: <HealthNews />,
+      },
+      {
+        path: "/entertainment",
+        element: <EntertainmentNews />,
       },
     ],
   },

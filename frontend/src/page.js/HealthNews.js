@@ -1,20 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import useNewsData from "../Hooks/useNewsData";
 import Shimmer from "../components/Shimmer";
 import NewsCard from "../components/NewsCard";
-import { general_news } from "../constants";
-import { Link } from "react-router-dom";
+import { health_news } from "../constants";
 
-const GeneralNews = () => {
-  const [allNews] = useNewsData(general_news);
+const HealthNews = () => {
+  const [allNews] = useNewsData(health_news);
   if (!allNews || allNews.length === 0) {
     return <Shimmer />;
   }
   return (
     <div className="p-10 dark:bg-black">
       <h1 className="text-3xl font-bold text-black dark:text-white uppercase">
-        current trending
+        Health News
       </h1>
       <div>
         {allNews.map((news) => (
@@ -28,14 +28,14 @@ const GeneralNews = () => {
       </div>
       <div className="flex py-3 justify-center">
         <button className="text-white bg-blue-400 rounded py-2 px-4">
-          <Link to={"/"}>Previous page</Link>
+          <Link to={"/science"}>Previous page</Link>
         </button>
         <button className="text-white bg-blue-400 rounded py-2 px-4 ml-2">
-          <Link to={"/sports"}>Next Page</Link>
+          <Link to={"/entertainment"}>Next Page</Link>
         </button>
       </div>
     </div>
   );
 };
 
-export default GeneralNews;
+export default HealthNews;
