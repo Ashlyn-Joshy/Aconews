@@ -1,11 +1,12 @@
 import React from "react";
 
-import useBusinessNews from "../Hooks/useBusinessNews";
+import useNewsData from "../Hooks/useNewsData";
 import Shimmer from "../components/Shimmer";
 import NewsCard from "../components/NewsCard";
+import { business_news } from "../constants";
 
 const BusinessNews = () => {
-  const [allNews] = useBusinessNews();
+  const [allNews] = useNewsData(business_news);
   if (!allNews || allNews.length === 0) {
     return <Shimmer />;
   }

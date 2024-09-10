@@ -1,11 +1,12 @@
 import React from "react";
 
-import useSportNews from "../Hooks/useSportNews";
+import useNewsData from "../Hooks/useNewsData";
 import Shimmer from "../components/Shimmer";
 import NewsCard from "../components/NewsCard";
+import { sports_news } from "../constants";
 
 const SportsNews = () => {
-  const [allNews] = useSportNews();
+  const [allNews] = useNewsData(sports_news);
   if (!allNews || allNews.length === 0) {
     return <Shimmer />;
   }

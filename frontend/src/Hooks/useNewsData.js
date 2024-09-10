@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { news_api } from "../constants";
 
-const useNewsData = () => {
+const useNewsData = (news_api) => {
   const [allNews, setAllNews] = useState([]);
   const newsInfo = async () => {
     try {
@@ -14,7 +13,7 @@ const useNewsData = () => {
   };
   useEffect(() => {
     newsInfo();
-  }, []);
+  }, [news_api]);
   return [allNews];
 };
 
