@@ -1,8 +1,8 @@
 import React from "react";
 
-const Search = () => {
+const Search = ({ onSearch }) => {
   const handleSearch = (e) => {
-    console.log(e.target.value);
+    onSearch(e.target.value);
   };
   return (
     <div className="p-10 text-center dark:bg-black">

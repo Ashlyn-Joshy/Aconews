@@ -34,6 +34,24 @@ const Navbar = () => {
       case "Sports":
         navigate("/sports");
         break;
+      case "World":
+        navigate("/world");
+        break;
+      case "Nation":
+        navigate("/nation");
+        break;
+      case "Technology":
+        navigate("/technology");
+        break;
+      case "Entertainment":
+        navigate("/entertainment");
+        break;
+      case "Science":
+        navigate("/science");
+        break;
+      case "Health":
+        navigate("/health");
+        break;
       default:
         navigate("/");
     }
@@ -75,6 +93,12 @@ const Navbar = () => {
                 <option value="Current">Current Trending</option>
                 <option value="Business">Business</option>
                 <option value="Sports">Sports</option>
+                <option value="World">World</option>
+                <option value="Nation">Nation</option>
+                <option value="Technology">Technology</option>
+                <option value="Science">Science</option>
+                <option value="Health">Health</option>
+                <option value="Entertainment">Entertainment</option>
               </select>
             </li>
             <li>
